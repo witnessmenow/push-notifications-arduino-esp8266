@@ -8,5 +8,13 @@ There are two methods covered in this example.
 
 Both libraries can be added via the Arduino Library Manager.
 
+
+## Hardware
+The example is using the following hardware:
+
+- [Wemos D1 Mini](http://s.click.aliexpress.com/e/uzFUnIe)
+- Tactile Button X 2
+- 10k Resistor X 2
+
 Here is the circuit that this code is using.
 ![alt text](http://i.imgur.com/dfRGuVH.png "Circuit")
