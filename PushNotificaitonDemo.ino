@@ -19,19 +19,19 @@
 #include <WiFiClientSecure.h>
 
 //------- WiFi Settings -------
-char ssid[] = "Mikrotik";       // your network SSID (name)
-char password[] = "carolinebrian";  // your network key
+char ssid[] = "SSID";       // your network SSID (name)
+char password[] = "PASSWORD";  // your network key
 
 #define TELEGRAM_BUTTON_PIN D5
 #define IFTTT_BUTTON_PIN D6
 
 
 // ------- IFTTT Maker config --------
-#define KEY "dlXGlz3V1ixIjQf6S7V686"  // Get it from this page https://ifttt.com/services/maker/settings
+#define KEY "xxxxxxxxxxxxxxx"  // Get it from this page https://ifttt.com/services/maker/settings 
 #define EVENT_NAME "button_pressed" // Name of your event name, set when you are creating the applet
 
 // ------- Telegram config --------
-#define BOT_TOKEN "245123272:AAHq8-PxnPuU0C_wGZ6hWfxx6nOWZ9z44us"  // your Bot Token (Get from Botfather)
+#define BOT_TOKEN "XXXXXXXX:AAHq8-PxnPuU0C_YYYYYYYYYYYYYYY"  // your Bot Token (Get from Botfather)
 #define CHAT_ID "-128380507" // Chat ID of where you want the message to go (You can use MyIdBot to get the chat ID)
 
 // SSL client needed for both libraries
