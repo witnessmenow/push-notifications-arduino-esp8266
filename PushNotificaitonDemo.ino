@@ -19,19 +19,19 @@
 #include <WiFiClientSecure.h>
 
 //------- WiFi Settings -------
-char ssid[] = "SSID";       // your network SSID (name)
-char password[] = "PASSWORD";  // your network key
+char ssid[] = "xxx";       // your network SSID (name)
+char password[] = "yyyy";  // your network key
 
 #define TELEGRAM_BUTTON_PIN D5
 #define IFTTT_BUTTON_PIN D6
 
 
 // ------- IFTTT Maker config --------
-#define KEY "xxxxxxxxxxxxxxx"  // Get it from this page https://ifttt.com/services/maker/settings 
+#define KEY "zzzzzzzzzzzzzzzzzzzzzzz"  // Get it from this page https://ifttt.com/services/maker/settings
 #define EVENT_NAME "button_pressed" // Name of your event name, set when you are creating the applet
 
 // ------- Telegram config --------
-#define BOT_TOKEN "XXXXXXXX:AAHq8-PxnPuU0C_YYYYYYYYYYYYYYY"  // your Bot Token (Get from Botfather)
+#define BOT_TOKEN "XXXXXXXXX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"  // your Bot Token (Get from Botfather)
 #define CHAT_ID "-128380507" // Chat ID of where you want the message to go (You can use MyIdBot to get the chat ID)
 
 // SSL client needed for both libraries
@@ -81,9 +81,6 @@ void setup() {
   Serial.println(ip);
 
   ipAddress = ip.toString();
-  if(ifttt.triggerEvent(EVENT_NAME, ssid, ip.toString())){
-    Serial.println("Successfully sent");
-  }
 
 }
 
@@ -116,8 +113,8 @@ void triggerIftttEvent() {
 }
 
 void sendTelegramMessage() {
-  String message = "SSID: " + String(ssid) + "\n";
-  message = message + "IP: " + ipAddress + "\n";
+  String message = "SSID: " + ssid + "\n"
+  message = message + "IP: " + ipAddress + "\n"
   if(bot.sendMessage(CHAT_ID, message, "Markdown")){
     Serial.println("TELEGRAM Successfully sent");
   }
