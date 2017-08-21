@@ -113,8 +113,12 @@ void triggerIftttEvent() {
 }
 
 void sendTelegramMessage() {
-  String message = "SSID: " + ssid + "\n"
-  message = message + "IP: " + ipAddress + "\n"
+  String message = "SSID:  ";
+  message.concat(ssid);
+  message.concat("\n");
+  message.concat("IP: ");
+  message.concat(ipAddress);
+  message.concat("\n");
   if(bot.sendMessage(CHAT_ID, message, "Markdown")){
     Serial.println("TELEGRAM Successfully sent");
   }
