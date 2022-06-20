@@ -1,4 +1,4 @@
-# push-notificaitons-arduino-esp8266
+# push-notifications-arduino-esp8266
 Example of how to generate push notifications on your phone from your ESP8266.
 
 There are two methods covered in this example.
